@@ -1,74 +1,127 @@
-main {
-    padding-block: 100px;
-    margin-top: 80px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    background: #1e293b;
+    color: white;
+    padding: 15px 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
 }
 
 .main-nav {
+    display: flex;
     justify-content: space-between;
-    padding: 12px 0;
+    align-items: center;
+}
+
+.company-logo h2 {
+    color: white;
 }
 
 .nav-links ul {
+    display: flex;
     gap: 20px;
+    list-style: none;
 }
 
-.hover-link {
+.nav-links li {
     cursor: pointer;
 }
 
-.hover-link:hover {
-    color: #577592;
+.nav-links li:hover {
+    color: #38bdf8;
 }
 
-.hover-link:active {
-    color: red;
+.search-bar {
+    display: flex;
+    gap: 10px;
+}
+
+.news-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
 }
 
 .search-button {
-    padding: 8px 16px;
-    border-radius: 8px;
+    padding: 8px 15px;
     border: none;
-    background-color: #2294ed;
+    background: #38bdf8;
     color: white;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .search-button:hover {
-    background-color: #1d69a3;
+    background: #0ea5e9;
+}
+
+main {
+    margin-top: 100px;
+    padding: 20px;
 }
 
 .cards-container {
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
 
 .card {
-    width: 360px;
-    min-height: 400px;
-    box-shadow: 0 0 4px #d4ecff;
-    border-radius: 6px;
+    background: white;
+    border-radius: 8px;
     overflow: hidden;
-    cursor: pointer;
-    background-color: #fff;
-    transition: 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
 }
 
 .card:hover {
-    box-shadow: 1px 1px 8px #d4ecff;
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
-.card-header img {
+.card img {
     width: 100%;
     height: 180px;
     object-fit: cover;
 }
 
-.card-content {
-    padding: 12px;
+.card h3 {
+    padding: 10px;
+    font-size: 18px;
 }
 
-.news-source {
-    margin-block: 12px;
+.card p {
+    padding: 0 10px 15px 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.active {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+#news-details {
+    margin-top: 40px;
+}
+
+.detail-box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-box img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    margin: 15px 0;
 }
