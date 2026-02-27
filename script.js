@@ -15,6 +15,13 @@ $(document).ready(function () {
         let text = $(".news-input").val();
         if (text) getNews(text);
     });
+
+    $(".news-input").keydown(function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault(); 
+        $(".search-button").click(); 
+    }
+});
 });
 
 function getNews(topic) {
